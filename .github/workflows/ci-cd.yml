@@ -31,13 +31,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: simonavasileva/movies:latest
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Deploy to Production
-      run: |
-        docker-compose -f docker-compose.yml up -d
+        tags: simonavasileva/kiii-project:latest
